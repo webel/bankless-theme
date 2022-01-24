@@ -190,6 +190,12 @@ production stylesheet in assets/built/screen.css
     grid-auto-flow: row dense;
 }
 
+@media (min-width: 900px) {
+    .gh-head-inner {
+        display: flex;
+        justify-content: space-between;
+    }
+}
 
 /* Brand
 /* ---------------------------------------------------------- */
@@ -250,6 +256,28 @@ production stylesheet in assets/built/screen.css
     opacity: 1;
 }
 
+/* .nav-current {
+    border-bottom: red solid;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    transition: 0.5s;
+} */
+
+.nav-current a::after {
+    content: "";
+    display: block;
+    width: 50%;
+    text-align: center;
+    border-bottom: solid var(--color-red);
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    margin: auto;
+}
+
+.nav-current:hover a::after {
+    width: 80%;
+    transition: 0.5s;
+}
 
 /* Secondary Navigation
 /* ---------------------------------------------------------- */
@@ -2081,6 +2109,16 @@ html.dark-mode .kg-header-card h3.kg-header-card-subheader {
     html.auto-color .kg-header-card h3.kg-header-card-subheader {
         color: #fff;
     }
+}
+
+/* ------- Toggle --------- */
+
+#sun, #moon {
+    fill: #575E64;
+}
+
+#sun.active, #moon.active {
+    fill: #EFE7E2;
 }
 
 /*
