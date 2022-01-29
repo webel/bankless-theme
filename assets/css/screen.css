@@ -35,12 +35,13 @@ production stylesheet in assets/built/screen.css
     /* Colours */
     --color-green: #a4d037;
     --color-yellow: #fecd35;
-    --color-red: #f05230;
+    --color-red: #D02128;
     --color-darkgrey: #15171A;
     --color-midgrey: #738a94;
     --color-lightgrey: #c5d2d9;
     --color-wash: #e5eff5;
-    --color-darkmode: #151719;
+    --color-darkmode: #172029;
+    ;
 
     /*
     An accent color is also set by Ghost itself in
@@ -92,7 +93,7 @@ production stylesheet in assets/built/screen.css
 .site-header {
     position: relative;
     color: #fff;
-    background: var(--color-darkgrey);
+    /* background: var(--color-darkgrey); */
 }
 
 .site-header-cover {
@@ -172,15 +173,16 @@ production stylesheet in assets/built/screen.css
 
 .gh-head {
     padding: 1vmin 4vmin;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     line-height: 1.3em;
-    color: #fff;
-    background: var(--color-darkgrey);
+    /* color: black; */
+    /* background: var(--color-darkgrey); */
 }
 
 .gh-head a {
     color: inherit;
     text-decoration: none;
+    padding: 0rem 2rem;
 }
 
 .gh-head-inner {
@@ -190,10 +192,13 @@ production stylesheet in assets/built/screen.css
     grid-auto-flow: row dense;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1000px) {
     .gh-head-inner {
         display: flex;
+        align-items: center;
         justify-content: space-between;
+        max-width: 1400px;
+        padding: 3rem 1rem 1rem;
     }
 }
 
@@ -213,13 +218,21 @@ production stylesheet in assets/built/screen.css
     display: block;
     padding: 10px 0;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 3rem;
     line-height: 1.2em;
     letter-spacing: -0.02em;
+    text-transform: uppercase;
 }
 
-.gh-head-logo img {
-    max-height: 26px;
+.gh-head-logo::after {
+    content: "";
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-bottom: solid var(--color-red);
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    margin: auto;
 }
 
 
@@ -248,7 +261,6 @@ production stylesheet in assets/built/screen.css
 
 .gh-head-menu .nav a {
     display: inline-block;
-    padding: 5px 0;
     opacity: 0.8
 }
 
@@ -2113,13 +2125,36 @@ html.dark-mode .kg-header-card h3.kg-header-card-subheader {
 
 /* ------- Toggle --------- */
 
-#sun, #moon {
+/* Accent light background: #E8A9AC;
+gray background: #E4E4E4;
+
+ */
+
+
+#moon {
+    fill: #E4E4E4;
+}
+
+#sun {
     fill: #575E64;
 }
 
-#sun.active, #moon.active {
+#moon.active {
     fill: #EFE7E2;
 }
+
+#sun.active {
+    fill: #E8A9AC;
+}
+
+#dark-mode-toggle {
+    height: 35px;
+}
+
+html.dark-mode #dark-mode-toggle rect {
+    fill: #273038;
+}
+
 
 /*
 

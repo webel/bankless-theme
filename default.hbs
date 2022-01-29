@@ -35,11 +35,8 @@
 
             <div class="gh-head-brand">
                 <a class="gh-head-logo" href="{{@site.url}}">
-                    {{#if @site.logo}}
-                        <img src="{{@site.logo}}" alt="{{@site.title}}" />
-                    {{else}}
+                        {{!-- NOTE: removed the @site.logo ifelse as the bankless logo is just arial with a border --}}
                         {{@site.title}}
-                    {{/if}}
                 </a>
                 <a class="gh-burger" role="button">
                     <div class="gh-burger-box">
