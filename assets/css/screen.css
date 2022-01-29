@@ -1822,7 +1822,8 @@ to the html tag on the very first line of the file.
  */
 
 html.dark-mode body {
-    color: rgba(255, 255, 255, 0.75);
+    /* color: rgba(255, 255, 255, 0.95); */
+    color: white;
     background: var(--color-darkmode);
 }
 
@@ -2149,6 +2150,10 @@ gray background: #E4E4E4;
 
 #dark-mode-toggle {
     height: 35px;
+}
+
+#dark-mode-toggle rect {
+    fill: white;
 }
 
 html.dark-mode #dark-mode-toggle rect {
