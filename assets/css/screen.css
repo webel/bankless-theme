@@ -38,10 +38,10 @@ production stylesheet in assets/built/screen.css
     --color-red: #D02128;
     --color-darkgrey: #15171A;
     --color-midgrey: #738a94;
-    --color-lightgrey: #c5d2d9;
+    --color-lightgrey: #E4E4E4;
     --color-wash: #e5eff5;
     --color-darkmode: #172029;
-    ;
+    --secondary-dark-bg: #273038;
 
     /*
     An accent color is also set by Ghost itself in
@@ -209,7 +209,7 @@ production stylesheet in assets/built/screen.css
     display: flex;
     align-items: center;
     height: 40px;
-    max-width: 200px;
+    max-width: 250px;
     text-align: center;
     word-break: break-all;
 }
@@ -607,7 +607,9 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     position: relative;
     display: block;
     overflow: hidden;
-    border-radius: 3px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    top: 10px;
 }
 
 .post-card-image {
@@ -651,7 +653,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 
 .post-card-title {
     margin: 0 0 0.4em;
-    font-size: 2.4rem;
+    font-size: 2rem;
     transition: color 0.2s ease-in-out;
 }
 
@@ -667,7 +669,10 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-}
+    padding: 2rem;
+    background-color: var(--color-lightgrey);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;}
 
 .post-card-excerpt {
     max-width: 56em;
@@ -825,8 +830,8 @@ make sure this only happens on large viewports / desktop-ish devices.
     .post-card-large {
         grid-column: 1 / span 3;
         display: grid;
-        grid-gap: 4vmin;
-        grid-template-columns: 1fr 1fr 1fr;
+        /* grid-gap: 4vmin; */
+        /* grid-template-columns: 1fr 1fr 1fr; */
         min-height: 280px;
         border-top: 0;
     }
@@ -837,7 +842,7 @@ make sure this only happens on large viewports / desktop-ish devices.
 
     .post-card-large .post-card-image-link {
         position: relative;
-        grid-column: 1 / span 2;
+        /* grid-column: 1 / span 2; */
         margin-bottom: 0;
         min-height: 380px;
     }
@@ -870,7 +875,7 @@ make sure this only happens on large viewports / desktop-ish devices.
     }
 
     .post-feed.list .post-card-large .post-card-title {
-        font-size: 2.4rem;
+        font-size: 2rem;
     }
 
     .post-card-large .post-card-excerpt p {
@@ -1448,7 +1453,6 @@ iframe.instagram-media + script + :not([id]) {
     padding: 9vmin 4vmin 10vmin;
     color: #fff;
     text-align: center;
-    background: var(--color-darkgrey);
 }
 
 .footer-cta.cta-alt {
@@ -1730,31 +1734,23 @@ iframe.instagram-media + script + :not([id]) {
 .site-footer {
     position: relative;
     margin: 40px 0 0 0;
-    padding: 40px 4vmin 140px;
-    color: #fff;
-    background: color-mod(var(--color-darkgrey) l(-5%));
+    padding: 40px 4vmin 25px;
+    background-color: var(--color-lightgrey);
 }
 
 .site-footer .inner {
     display: grid;
     grid-gap: 40px;
     grid-template-columns: auto 1fr auto;
-    color: rgba(255,255,255,0.7);
     font-size: 1.3rem;
 }
 
 .site-footer .copyright a {
-    color: #fff;
     letter-spacing: -0.015em;
     font-weight: 500;
 }
 
-.site-footer a {
-    color: rgba(255,255,255,0.7);
-}
-
 .site-footer a:hover {
-    color: rgba(255,255,255,1);
     text-decoration: none;
 }
 
@@ -1788,7 +1784,6 @@ iframe.instagram-media + script + :not([id]) {
     width: 2px;
     height: 2px;
     margin: 0 10px 0 0;
-    background: #fff;
     border-radius: 100%;
 }
 
@@ -1801,7 +1796,6 @@ iframe.instagram-media + script + :not([id]) {
     }
     .site-footer .copyright,
     .site-footer .copyright a {
-        color: #fff;
         font-size: 1.5rem;
     }
 }
@@ -1829,6 +1823,11 @@ html.dark-mode body {
 
 html.dark-mode img {
     opacity: 0.9;
+}
+
+html.dark-mode .site-footer, html.dark-mode .site-footer a {
+    background: var(--secondary-dark-bg);
+    color: #fff;
 }
 
 html.dark-mode .post-card,
@@ -1970,6 +1969,10 @@ html.dark-mode .kg-header-card.kg-style-light {
 html.dark-mode .kg-header-card h2.kg-header-card-header,
 html.dark-mode .kg-header-card h3.kg-header-card-subheader {
     color: #fff;
+}
+
+html.dark-mode .post-card-content {
+    background: var(--secondary-dark-bg);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -2160,6 +2163,75 @@ html.dark-mode #dark-mode-toggle rect {
     fill: #273038;
 }
 
+/* Landing info */
+
+.landing-info, .call-to-action {
+    padding: 10rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.landing-info-text {
+    max-width: 650px;
+}
+
+.landing-sub-info {
+    max-width: 1000px;
+}
+
+
+#landing-sub-info {
+    padding: 10rem 5rem;
+    background: var(--color-lightgrey);
+}
+
+.landing-sub-info a, .call-to-action a {
+    background-color: var(--ghost-accent-color);
+    margin-top: 2rem;
+    padding: 1rem 3rem;
+    color: white;
+}
+
+#landing-sub-info p {
+    padding-bottom: 20px;
+}
+
+#landing-sub-info p:last-of-type, .call-to-action p {
+    padding-bottom: 40px;
+}
+
+html.dark-mode #landing-sub-info {
+    background: var(--secondary-dark-bg);
+}
+
+
+/* Call to action */
+.call-to-text {
+    max-width: 500px;
+}
+
+.call-to-action {
+    justify-content: space-around;
+}
+
+/* #ghost-portal-root,
+a[href^="https://ghost.org"],
+.footer-cta { display: none; } */
+
+.gh-portal-triggerbtn-iframe {
+    display: none;
+}
+
+@media(max-width: 900px) {
+    .landing-info {
+        flex-direction: column-reverse;
+    }
+
+    .call-to-action svg {
+        display: none;
+    }
+}
 
 /*
 
