@@ -85,6 +85,11 @@
 <script src="{{asset "built/casper.js"}}"></script>
 <script>
 $(document).ready(function () {
+    const wasDarkmode = localStorage.getItem('darkmode') === 'true';
+    if (wasDarkmode) {
+          document.querySelector("#sun").classList.toggle("active");
+          document.querySelector("#moon").classList.toggle("active");
+    }
     // Mobile Menu Trigger
     $('.gh-burger').click(function () {
         $('body').toggleClass('gh-head-open');
