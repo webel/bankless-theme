@@ -517,7 +517,6 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
         left: 0;
         z-index: 3999999;
         overflow-y: scroll;
-        background: var(--color-darkmode) !important;
     }
     .gh-head-open #gh-head .gh-head-inner {
         grid-template-rows: auto 1fr auto;
@@ -543,11 +542,19 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 }
 
 .home-template .gh-head.has-cover {
-    background: var(--color-darkgrey);
+    background: #F2F2F2;
 }
 
 .home-template.gh-head-open .gh-head {
-    background: var(--color-darkgrey);
+    background: #F2F2F2;
+}
+
+html.dark-mode .home-template .gh-head.has-cover {
+    background: var(--color-darkmode);
+}
+
+html.dark-mode .home-template.gh-head-open .gh-head {
+    background: var(--color-darkmode);
 }
 
 .home-template .gh-head.has-cover .gh-head-logo {
@@ -2209,10 +2216,6 @@ html.dark-mode #landing-sub-info {
 /* Call to action */
 .call-to-text {
     max-width: 500px;
-}
-
-.call-to-action {
-    justify-content: space-around;
 }
 
 /* #ghost-portal-root,
