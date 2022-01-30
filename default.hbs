@@ -20,6 +20,9 @@
             --button-text-color: {{#match @custom.header_button_text_color "Light"}}#fff{{else}}var(--color-darkgrey){{/match}};
         }
     </style>
+    <script>
+        document.documentElement.classList.toggle('dark-mode', localStorage.getItem('darkmode') === 'true');
+    </script>
 
     {{!-- Theme assets - use the {asset} helper to reference styles & scripts,
     this will take care of caching and cache-busting automatically --}}

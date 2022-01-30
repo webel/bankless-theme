@@ -2168,7 +2168,7 @@ html.dark-mode #dark-mode-toggle rect {
 .landing-info, .call-to-action {
     padding: 10rem 5rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
