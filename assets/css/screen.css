@@ -541,19 +541,19 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     z-index: 2000;
 }
 
-.home-template .gh-head.has-cover {
+.gh-head {
     background: #F2F2F2;
 }
 
-.home-template.gh-head-open .gh-head {
+.gh-head-open .gh-head {
     background: #F2F2F2;
 }
 
-html.dark-mode .home-template .gh-head.has-cover {
+html.dark-mode .gh-head {
     background: var(--color-darkmode);
 }
 
-html.dark-mode .home-template.gh-head-open .gh-head {
+html.dark-mode .gh-head-open .gh-head {
     background: var(--color-darkmode);
 }
 
