@@ -2184,8 +2184,12 @@ html.dark-mode #dark-mode-toggle rect {
     padding: 10rem 20rem;
 }
 
+.landing-info p {
+    margin-bottom: 3rem;
+}
+
 .landing-info-text {
-    max-width: 650px;
+    max-width: 640px;
 }
 
 .landing-sub-info {
@@ -2198,7 +2202,7 @@ html.dark-mode #dark-mode-toggle rect {
     background: var(--color-lightgrey);
 }
 
-.landing-sub-info a, .call-to-action a {
+.landing-info a, .landing-sub-info a, .call-to-action a {
     background-color: var(--ghost-accent-color);
     margin-top: 2rem;
     padding: 1rem 3rem;
