@@ -2180,6 +2180,10 @@ html.dark-mode #dark-mode-toggle rect {
     align-items: center;
 }
 
+.landing-info {
+    padding: 10rem 20rem;
+}
+
 .landing-info-text {
     max-width: 650px;
 }
