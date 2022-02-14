@@ -1458,7 +1458,6 @@ iframe.instagram-media + script + :not([id]) {
     position: relative;
     margin-bottom: -40px;
     padding: 9vmin 4vmin 10vmin;
-    color: #fff;
     text-align: center;
 }
 
