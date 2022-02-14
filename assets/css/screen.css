@@ -2160,6 +2160,7 @@ gray background: #E4E4E4;
 
 #dark-mode-toggle {
     height: 35px;
+    cursor: pointer;
 }
 
 #dark-mode-toggle rect {
