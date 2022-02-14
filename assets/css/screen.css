@@ -1519,11 +1519,11 @@ iframe.instagram-media + script + :not([id]) {
     padding: 4vmin;
     margin: 40px auto -40px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    background: color-mod(var(--color-light) l(-5%));
+    background: color-mod(var(--color-light) l(-10%));
 }
 
 html.dark-mode .read-more-wrap {
-    background: color-mod(var(--color-darkmode) l(-5%));
+    background: color-mod(var(--color-darkmode) l(-10%));
 }
 
 .read-more {
