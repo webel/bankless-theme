@@ -231,6 +231,7 @@ production stylesheet in assets/built/screen.css
     width: 100%;
     text-align: center;
     border-bottom: solid var(--color-red);
+    border-bottom-width: 3px;
     border-bottom-left-radius: 10%;
     border-bottom-right-radius: 10%;
     margin: auto;
@@ -2185,7 +2186,13 @@ html.dark-mode #dark-mode-toggle rect {
 }
 
 .landing-info {
-    padding: 10rem 20rem;
+    padding: 10rem 5rem;
+}
+
+@media(min-width: 900px) {
+    .landing-info {
+        padding: 10rem 10rem;
+    }
 }
 
 .landing-info p {
@@ -2225,6 +2232,24 @@ html.dark-mode #landing-sub-info {
     background: var(--secondary-dark-bg);
 }
 
+/* Social media icons */
+#social-media-icons {
+    width: 100%;
+}
+
+.social-icon, #instagram {
+    fill: #172029;
+}
+
+html.dark-mode .social-icon, html.dark-mode #instagram {
+    fill: white;
+}
+
+/* @media (max-width: 800px) {
+    #social-media-icons {
+        width: 500px;
+    }
+} */
 
 /* Call to action */
 .call-to-text {
