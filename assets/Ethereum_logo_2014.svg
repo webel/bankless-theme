@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="64" height="104">
+
+<g transform="matrix(0.24940048 0 0 0.24940048 0.07673891 -0)">
+	<g>
+        <path d="M127.9611 0L125.1661 9.5L125.1661 285.168L127.9611 287.958L255.9231 212.32L127.9611 0" stroke="none" fill="#343434" fill-rule="nonzero" />
+        <path d="M127.962 0L0 212.32L127.962 287.959L127.962 154.158L127.962 0" stroke="none" fill="#8C8C8C" fill-rule="nonzero" />
+        <path d="M127.9611 312.1866L126.3861 314.1066L126.3861 412.3056L127.9611 416.9066L255.9991 236.5866L127.9611 312.1866" stroke="none" fill="#3C3C3B" fill-rule="nonzero" />
+        <path d="M127.962 416.9052L127.962 312.1852L0 236.5852L127.962 416.9052" stroke="none" fill="#8C8C8C" fill-rule="nonzero" />
+        <path d="M127.9611 287.9577L255.9211 212.3207L127.9611 154.1587L127.9611 287.9577" stroke="none" fill="#141414" fill-rule="nonzero" />
+        <path d="M0.0009 212.3208L127.9609 287.9578L127.9609 154.1588L0.0009 212.3208" stroke="none" fill="#393939" fill-rule="nonzero" />
+	</g>
+</g>
+</svg>

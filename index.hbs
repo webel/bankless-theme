@@ -8,10 +8,28 @@ into the {body} of the default.hbs template --}}
     <div class="inner posts">
 
         <div class="post-feed{{#match @custom.feed_layout "List"}} list{{/match}}">
-            {{#foreach posts}}
-
-                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+        {{!-- Get all posts for tag frontpage --}}
+        {{!-- {{#get "posts" filter="tags:[frontpage]" limit="1"}}
+            {{#each posts}}
                 {{> "post-card"}}
+            {{/each}}
+        {{/get}}
+
+                {{#get "posts" filter="tags:[frontpage]" limit="1"}}
+            {{#each posts}}
+                {{> "post-card"}}
+            {{/each}}
+        {{/get}} --}}
+            
+            {{#foreach posts}}
+                {{#has tag="Startsida"}}
+                    {{> "post-card"}}
+                {{/has}}
+                {{^has tag="Startsida"}}
+                    {{> "post-card"}}
+                {{/has}}
+                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                {{!-- {{> "post-card"}} --}}
 
             {{/foreach}}
         </div>

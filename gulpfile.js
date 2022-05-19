@@ -66,7 +66,7 @@ function js(done) {
             'assets/js/*.js'
         ], {sourcemaps: true}),
         concat('casper.js'),
-        uglify(),
+        // uglify(),
         dest('assets/built/', {sourcemaps: '.'}),
         livereload()
     ], handleError(done));

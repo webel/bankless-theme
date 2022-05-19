@@ -2199,6 +2199,18 @@ html.dark-mode #dark-mode-toggle rect {
     margin-bottom: 3rem;
 }
 
+.landing-info li {
+    color: var(--ghost-accent-color);
+}
+
+.landing-info li span {
+    color: #172029;
+}
+
+html.dark-mode .landing-info li span {
+    color: white;
+}
+
 .landing-info-text {
     max-width: 640px;
 }
@@ -2220,6 +2232,21 @@ html.dark-mode #dark-mode-toggle rect {
     color: white;
 }
 
+.landing-info-text .button-secondary {
+    margin-top: 2rem;
+    border: solid 1px var(--ghost-accent-color);
+    background-color: unset;
+    position: relative;
+    top: 4rem;
+    color: var(--ghost-accent-color);
+}
+
+@media(min-width: 600px) {
+    .landing-info-text .button-secondary {
+        top: unset;
+        left: 4rem;
+    }
+}
 #landing-sub-info p {
     padding-bottom: 20px;
 }
@@ -2262,6 +2289,18 @@ a[href^="https://ghost.org"],
 
 .gh-portal-triggerbtn-iframe {
     display: none;
+}
+/* 
+#ethereum {
+    height: 30px;
+    position: relative;
+
+} */
+
+@media(max-width: 600px) {
+    .landing-info svg {
+        display: none;
+    }
 }
 
 @media(max-width: 900px) {
